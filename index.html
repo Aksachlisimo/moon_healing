@@ -60,6 +60,13 @@ section{padding-block:96px 0}
 .btn-dark{background:var(--night);color:var(--on-night)}
 .btn-dark:hover{background:var(--night-2)}
 .btn svg{width:18px;height:18px;flex:none}
+/* Promo bar */
+.promo{display:flex;align-items:center;justify-content:center;gap:12px;min-height:44px;padding:8px max(16px,env(safe-area-inset-left,0px));background:linear-gradient(90deg,#C9A65E,var(--moon),#F3E3BC,var(--moon),#C9A65E);background-size:200% 100%;animation:shine 8s linear infinite;color:var(--night);text-decoration:none;font-size:15px;font-weight:500;text-align:center}
+@keyframes shine{to{background-position:200% 0}}
+.promo-tag{flex:none;background:var(--night);color:var(--moon);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:4px 10px;border-radius:999px}
+.promo-s{display:none;font-weight:600}
+.promo-go{font-weight:600;transition:transform .2s}
+.promo:hover .promo-go{transform:translateX(4px)}
 /* Header */
 .nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(20,18,31,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06);color:var(--on-night)}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--night)}
@@ -80,6 +87,11 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:56px;align-items:center;padding-block:72px 64px}
 .status{display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);font-size:14px;color:var(--on-night-soft)}
 .dot{width:9px;height:9px;border-radius:50%;background:var(--moon);box-shadow:0 0 0 0 currentColor}
+#status{background:var(--moon);border-color:var(--moon);color:var(--night);font-weight:600;box-shadow:0 8px 26px -10px rgba(230,200,138,.8)}
+#status .dot{background:var(--night)}
+.mbar .status{color:var(--moon);font-weight:600}
+.appt{background:#FBF4E4!important;border-left-width:4px!important;font-size:16px!important}
+.about .appt-quote{background:#FBF4E4;border-radius:0 16px 16px 0;padding:16px 20px!important}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(63,179,127,.55)}100%{box-shadow:0 0 0 10px rgba(63,179,127,0)}}
 .hero h1{font-size:clamp(46px,7.2vw,88px);line-height:.98;letter-spacing:-.02em;margin:26px 0 22px;font-weight:300}
 .hero h1 em{color:var(--moon)}
@@ -170,9 +182,11 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .review figcaption b{color:var(--ink)}
 /* About */
 .about{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:56px;align-items:center}
-.portrait{position:relative;border-radius:200px 200px 28px 28px;overflow:hidden;aspect-ratio:4/5;max-width:440px;width:100%;background:var(--night)}
-.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
-.portrait figcaption{position:absolute;left:16px;bottom:16px;background:rgba(20,18,31,.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--on-night);border-radius:999px;padding:8px 16px;font-size:14px}
+.portrait{position:relative;max-width:440px;width:100%;padding:10px;border-radius:240px 240px 34px 34px;background:var(--paper);box-shadow:0 0 0 1px rgba(230,200,138,.75),0 44px 70px -38px rgba(20,18,31,.55);justify-self:center}
+.portrait::before{content:"";position:absolute;inset:-14px;border:1px solid rgba(133,101,31,.35);border-radius:254px 254px 46px 46px;pointer-events:none}
+.portrait::after{content:"";position:absolute;top:-6px;right:18%;width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--moon-hi),var(--moon) 65%,#C9A65E);box-shadow:0 0 0 6px var(--day),0 6px 18px rgba(133,101,31,.35)}
+.portrait img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:230px 230px 26px 26px;background:var(--night)}
+.portrait figcaption{position:absolute;left:26px;bottom:26px;background:rgba(20,18,31,.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--on-night);border-radius:999px;padding:8px 16px;font-size:14px}
 .about p{color:var(--ink-soft);max-width:34em;margin:0 0 16px}
 .about h2{margin:12px 0 24px}
 .pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
@@ -240,6 +254,7 @@ section{padding-block:72px 0}
 }
 @media (max-width:560px){
 .nav .btn{display:none}
+.promo-l{display:none}.promo-s{display:inline;white-space:nowrap}.promo{gap:10px;font-size:14px}
 .book-form,.book-out,.visit-info{padding:26px 20px}
 .card{padding:24px}
 .pillars{grid-template-columns:1fr}
@@ -248,12 +263,13 @@ section{padding-block:72px 0}
 .mbar .btn{min-height:44px;padding:8px 20px;font-size:15px}
 footer{padding-bottom:70px}
 .toast{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
-.portrait{max-width:300px;margin-inline:auto!important}
+.portrait{max-width:min(340px,calc(100% - 28px));margin-inline:auto!important}
 .about{gap:36px}
 .lang button{min-height:44px}
 .nav .wrap{gap:12px}
 .brand{font-size:18px}
 }
+@media (max-width:359px){.promo-go{display:none}.promo-tag{letter-spacing:.06em;padding:4px 8px}}
 @media (prefers-reduced-motion:reduce){
 html{scroll-behavior:auto}
 *,*::before,*::after{animation:none!important;transition:none!important}
@@ -262,6 +278,7 @@ html{scroll-behavior:auto}
 </style>
 </head>
 <body>
+<a class="promo" href="#book" data-pick="package"><span class="promo-tag" data-i18n="promo.tag">Season offer</span><span class="promo-l" data-i18n="promo.text">Save 25% with the 8-session journey: 900k ₫ per session instead of 1,200k ₫</span><span class="promo-s" data-i18n="promo.short">Save 25% · 8 sessions</span><span class="promo-go" aria-hidden="true">→</span></a>
 <header class="nav">
 <div class="wrap">
 <a class="brand" href="#top" aria-label="Moon Healing, back to top">
@@ -342,6 +359,7 @@ Moon Healing
 </article>
 <article class="card rv">
 <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17M3.5 12h17M6 6l12 12M18 6 6 18"/></svg></div>
+<span class="tag" data-i18n="s3.tag">Season offer</span>
 <h3 data-i18n="s3.h">8-session journey</h3>
 <p data-i18n="s3.p">Eight somatic sessions to make care a habit, at a lower rate per visit.</p>
 <span class="save" data-i18n="s3.save">Save 2,400k ₫ (25%) vs. 8 single sessions</span>
@@ -448,7 +466,7 @@ Moon Healing
 <figure class="review rv">
 <div class="stars" aria-label="5 stars">★★★★★</div>
 <blockquote>“It's like getting a massage from someone that really cares. It's very special you must recommend.”</blockquote>
-<figcaption><b data-i18n="r.g">Google review</b><span data-i18n="r.c3">Massage</span></figcaption>
+<figcaption><b>Alex</b><span data-i18n="r.c3">Massage</span></figcaption>
 </figure>
 </div>
 </div>
@@ -456,7 +474,7 @@ Moon Healing
 <section id="about">
 <div class="wrap about">
 <figure class="portrait rv" style="margin:0">
-<img src="/moon.webp" alt="Moon, the healer behind Moon Healing" width="400" height="500" loading="lazy">
+<img src="/moon.webp" srcset="/moon-480.webp 480w, /moon.webp 800w" sizes="(max-width:560px) 86vw, (max-width:980px) 400px, 420px" alt="Moon, the healer behind Moon Healing" width="800" height="1000" loading="lazy" decoding="async">
 <figcaption>Moon · Hằng</figcaption>
 </figure>
 <div class="rv">
@@ -534,7 +552,7 @@ Moon Healing
 document.documentElement.classList.add('js');
 var T={
 en:{
-'nav.sessions':'Sessions','nav.book':'Booking','nav.reviews':'Reviews','nav.about':'About','nav.visit':'Visit',
+'promo.tag':'Season offer','promo.text':'Save 25% with the 8-session journey: 900k ₫ per session instead of 1,200k ₫','promo.short':'Save 25% · 8 sessions','nav.sessions':'Sessions','nav.book':'Booking','nav.reviews':'Reviews','nav.about':'About','nav.visit':'Visit',
 'cta.book':'Book a session','cta.bookShort':'Book','cta.prices':'See sessions &amp; prices',
 'hero.h1':'Slow down.<br><em>Come back</em> to yourself.',
 'hero.lead':"One-to-one reiki, massage and somatic sessions with Moon, in a quiet room in Hải Châu, Đà Nẵng. Afterwards there's time to talk and a cup of tea.",
@@ -543,7 +561,7 @@ en:{
 's.eyebrow':'Sessions &amp; prices','s.h2':'Choose what your <em>body</em> needs','s.pick':'Book this →',
 's1.h':'Reiki','s1.p':"One hour of gentle, hands-on reiki in a quiet room. You lie back and rest; there's nothing you need to do.",'s1.l1':'One-to-one, in a quiet room','s1.l2':'Time to talk afterwards','s1.u':'1 hour',
 's2.tag':'Signature','s2.h':'Somatic session','s2.p':'Massage with natural essential oils, reiki, singing bowls and other tools, combined into one holistic session.','s2.l1':'Massage + reiki + singing bowls','s2.l2':'Natural essential oils','s2.u':'per session',
-'s3.h':'8-session journey','s3.p':'Eight somatic sessions to make care a habit, at a lower rate per visit.','s3.save':'Save {save} (25%) vs. 8 single sessions','s3.u':'per session ·','s3.t':'total',
+'s3.tag':'Season offer','s3.h':'8-session journey','s3.p':'Eight somatic sessions to make care a habit, at a lower rate per visit.','s3.save':'Save {save} (25%) vs. 8 single sessions','s3.u':'per session ·','s3.t':'total',
 's.note':'Prices in Vietnamese đồng (k = 1,000 ₫). You pay in VND by cash or QR code.',
 's.noteFx':'Approximate conversion at 1 € ≈ 30,000 ₫ and 1 $ ≈ 26,500 ₫. You pay in VND by cash or QR code.',
 'b.eyebrow':'Booking','b.h2':'Write your message in <em>ten seconds</em>','b.lead':"Moon works by appointment only. Pick a session and a time, and we'll write the message for you to send her on Instagram. She'll confirm.",
@@ -577,7 +595,7 @@ en:{
 'closed':'Closed','lit':'{p}% lit','toFull':'full moon in {n} days','fullTonight':'full moon tonight','toFull1':'full moon tomorrow'
 },
 vi:{
-'nav.sessions':'Liệu trình','nav.book':'Đặt lịch','nav.reviews':'Đánh giá','nav.about':'Giới thiệu','nav.visit':'Địa chỉ',
+'promo.tag':'Ưu đãi mùa này','promo.text':'Tiết kiệm 25% với hành trình 8 buổi: 900k ₫/buổi thay vì 1.200k ₫','promo.short':'Giảm 25% · 8 buổi','nav.sessions':'Liệu trình','nav.book':'Đặt lịch','nav.reviews':'Đánh giá','nav.about':'Giới thiệu','nav.visit':'Địa chỉ',
 'cta.book':'Đặt lịch hẹn','cta.bookShort':'Đặt lịch','cta.prices':'Xem liệu trình &amp; bảng giá',
 'hero.h1':'Chậm lại.<br><em>Trở về</em> với chính mình.',
 'hero.lead':'Reiki, massage và liệu trình somatic một kèm một cùng Moon, trong một căn phòng yên tĩnh ở Hải Châu, Đà Nẵng. Sau buổi trị liệu là thời gian trò chuyện bên tách trà.',
@@ -586,7 +604,7 @@ vi:{
 's.eyebrow':'Liệu trình &amp; bảng giá','s.h2':'Chọn điều <em>cơ thể</em> bạn cần','s.pick':'Đặt liệu trình này →',
 's1.h':'Reiki','s1.p':'Một giờ reiki nhẹ nhàng trong căn phòng yên tĩnh. Bạn chỉ cần nằm thư giãn, không phải làm gì cả.','s1.l1':'Một kèm một, trong phòng yên tĩnh','s1.l2':'Có thời gian trò chuyện sau buổi','s1.u':'1 giờ',
 's2.tag':'Đặc trưng','s2.h':'Liệu trình Somatic','s2.p':'Massage với tinh dầu thiên nhiên, reiki, chuông xoay và các công cụ khác, kết hợp trong một buổi trị liệu toàn diện.','s2.l1':'Massage + reiki + chuông xoay','s2.l2':'Tinh dầu thiên nhiên','s2.u':'mỗi buổi',
-'s3.h':'Hành trình 8 buổi','s3.p':'Tám buổi somatic để việc chăm sóc bản thân thành thói quen, với giá tốt hơn mỗi buổi.','s3.save':'Tiết kiệm {save} (25%) so với 8 buổi lẻ','s3.u':'mỗi buổi ·','s3.t':'tổng cộng',
+'s3.tag':'Ưu đãi mùa này','s3.h':'Hành trình 8 buổi','s3.p':'Tám buổi somatic để việc chăm sóc bản thân thành thói quen, với giá tốt hơn mỗi buổi.','s3.save':'Tiết kiệm {save} (25%) so với 8 buổi lẻ','s3.u':'mỗi buổi ·','s3.t':'tổng cộng',
 's.note':'Giá tính bằng đồng (k = 1.000 ₫). Thanh toán bằng tiền mặt hoặc QR.',
 's.noteFx':'Quy đổi ước tính: 1 € ≈ 30.000 ₫, 1 $ ≈ 26.500 ₫. Thanh toán bằng VND, tiền mặt hoặc QR.',
 'b.eyebrow':'Đặt lịch','b.h2':'Soạn tin nhắn trong <em>mười giây</em>','b.lead':'Moon chỉ nhận khách theo lịch hẹn. Chọn liệu trình và giờ. Tin nhắn sẽ được soạn sẵn để bạn gửi Moon qua Instagram, và Moon sẽ xác nhận.',
