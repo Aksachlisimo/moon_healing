@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Moon Healing · Reiki & Massage in Đà Nẵng</title>
+<meta name="description" content="One-to-one reiki, massage and somatic sessions with Moon in Hải Châu, Đà Nẵng. Rated 5.0 on Google. English and Vietnamese. Book on Instagram.">
+<meta name="theme-color" content="#14121F">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Moon Healing · Reiki & Massage in Đà Nẵng">
+<meta property="og:description" content="One-to-one reiki, massage and somatic sessions with Moon in Hải Châu, Đà Nẵng. Book on Instagram.">
+<meta property="og:image" content="/moon.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Be+Vietnam+Pro:wght@400;500;600&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HealthAndBeautyBusiness","name":"Moon Healing","image":"/moon.webp",
+"address":{"@type":"PostalAddress","streetAddress":"K91, 8 Đ. 3 Tháng 2","addressLocality":"Hải Châu, Đà Nẵng","postalCode":"50000","addressCountry":"VN"},
+"geo":{"@type":"GeoCoordinates","latitude":16.0852496,"longitude":108.2190103},
+"telephone":"+84 975 422 987","openingHours":"Tu-Fr 10:00-12:00",
+"sameAs":["https://www.instagram.com/moonhealing_reiki_massage/"]}
+</script>
+<style>
+/* Layout: a night-sky hero with today's real moon, then a lilac "day" body of sessions, booking builder, breathing pause, reviews, about and map; night returns for the footer. */
+:root{
+--night:#14121F; --night-2:#1F1C30; --night-line:#322E48;
+--moon:#E6C88A; --moon-hi:#F3E3BC; --moon-deep:#85651F;
+--day:#F3F0F7; --paper:#FFFFFF; --ink:#17151F; --ink-soft:#4B4660; --line:#E2DDEA;
+--on-night:#F3EEE6; --on-night-soft:#C3BDD3; --on-night-faint:#9B95B1;
+--ok:#3FB37F; --closed:#E0826B;
+--display:'Fraunces',Georgia,'Times New Roman',serif;
+--body:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',sans-serif;
+--radius:20px;
+color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--day);color:var(--ink);font:17px/1.65 var(--body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--moon);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;font-optical-sizing:auto}
+h2{font-size:clamp(32px,4.4vw,50px);line-height:1.08;letter-spacing:-.01em}
+h2 em,h1 em{font-style:italic;color:var(--moon-deep)}
+.eyebrow{font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--moon-deep)}
+.lead{font-size:18px;color:var(--ink-soft);max-width:36em;margin:14px 0 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:40px}
+.sec-head>div{min-width:0}
+section{padding-block:96px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 26px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;border:0;transition:transform .2s,background .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-moon{background:var(--moon);color:var(--night);box-shadow:0 10px 30px -10px rgba(230,200,138,.7)}
+.btn-moon:hover{background:var(--moon-hi)}
+.btn-line{border:1px solid #4A4566;color:var(--on-night);background:transparent}
+.btn-line:hover{background:var(--night-2)}
+.btn-dark{background:var(--night);color:var(--on-night)}
+.btn-dark:hover{background:var(--night-2)}
+.btn svg{width:18px;height:18px;flex:none}
+/* Header */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(20,18,31,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06);color:var(--on-night)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--night)}
+.nav .wrap{display:flex;align-items:center;gap:20px;min-height:66px}
+.brand{display:flex;align-items:center;gap:10px;min-height:44px;font-family:var(--display);font-size:20px;letter-spacing:.04em;text-decoration:none;margin-right:auto}
+.brand svg{width:26px;height:26px}
+.nav-links{display:flex;gap:26px;font-size:15px}
+.nav-links a{text-decoration:none;color:var(--on-night-soft);transition:color .2s}
+.nav-links a:hover{color:var(--on-night)}
+.lang{display:flex;border:1px solid #3B3656;border-radius:999px;padding:3px}
+.lang button{background:none;border:0;border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600;color:var(--on-night-faint);min-height:40px;min-width:44px}
+.lang button[aria-pressed="true"]{background:var(--moon);color:var(--night)}
+.nav .btn{min-height:42px;padding:8px 20px;font-size:15px}
+/* Hero */
+.hero{position:relative;background:var(--night);color:var(--on-night);overflow:hidden;isolation:isolate}
+#sky{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:140px;background:linear-gradient(to bottom,transparent,rgba(20,18,31,.9));z-index:-1;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:56px;align-items:center;padding-block:72px 64px}
+.status{display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);font-size:14px;color:var(--on-night-soft)}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--moon);box-shadow:0 0 0 0 currentColor}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(63,179,127,.55)}100%{box-shadow:0 0 0 10px rgba(63,179,127,0)}}
+.hero h1{font-size:clamp(46px,7.2vw,88px);line-height:.98;letter-spacing:-.02em;margin:26px 0 22px;font-weight:300}
+.hero h1 em{color:var(--moon)}
+.hero .lead{color:var(--on-night-soft);font-size:19px}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.moon-card{justify-self:center;display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center}
+#moonCanvas{width:min(340px,72vw);height:auto;aspect-ratio:1;max-width:100%}
+.moon-cap{font-size:14px;color:var(--on-night-faint);letter-spacing:.04em}
+.moon-cap b{display:block;font-family:var(--display);font-weight:400;font-size:22px;letter-spacing:0;color:var(--on-night);margin-top:2px}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--night-line);padding-block:22px 30px;gap:16px}
+.facts div{min-width:0}
+.facts dt{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--on-night-faint);font-weight:600}
+.facts dd{margin:4px 0 0;font-size:16px;color:var(--on-night)}
+.stars{color:var(--moon);letter-spacing:2px}
+/* Sessions */
+.cur{display:flex;gap:4px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px}
+.cur button{border:0;background:none;border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;color:var(--ink-soft);min-height:44px;min-width:56px}
+.cur button[aria-pressed="true"]{background:var(--night);color:var(--on-night)}
+.sessions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;gap:14px;min-width:0;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 24px 50px -28px rgba(23,21,31,.35)}
+.card .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--day);color:var(--moon-deep)}
+.card .ic svg{width:24px;height:24px}
+.card h3{font-size:28px;line-height:1.1}
+.card p{margin:0;color:var(--ink-soft)}
+.card ul{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:15px;color:var(--ink-soft)}
+.card li{display:flex;gap:10px;align-items:baseline}
+.card li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--moon);transform:translateY(-2px)}
+.price{margin-top:auto;padding-top:18px;border-top:1px solid var(--line);display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;font-variant-numeric:tabular-nums}
+.price b{font-family:var(--display);font-weight:400;font-size:34px;line-height:1}
+.price span{font-size:14px;color:var(--ink-soft)}
+.card.feature{background:var(--night);color:var(--on-night);border-color:var(--night)}
+.card.feature p,.card.feature li,.card.feature .price span{color:var(--on-night-soft)}
+.card.feature .price{border-top-color:var(--night-line)}
+.card.feature .ic{background:var(--night-2);color:var(--moon)}
+.tag{position:absolute;top:22px;right:22px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:5px 11px;border-radius:999px;background:var(--moon);color:var(--night)}
+.save{display:inline-flex;align-self:flex-start;font-size:13px;font-weight:600;padding:4px 10px;border-radius:999px;background:#E9F6EF;color:#1E6B47}
+.choose{margin-top:0;align-self:flex-start;background:none;border:0;padding:10px 0;min-height:44px;font-weight:600;font-size:15px;text-decoration:underline;text-underline-offset:4px;color:var(--moon-deep)}
+.card.feature .choose{color:var(--moon)}
+.note{font-size:14px;color:var(--ink-soft);margin:18px 0 0}
+/* Booking builder */
+.book{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;background:var(--paper);border:1px solid var(--line);border-radius:28px;overflow:hidden}
+.book-form{padding:38px;display:grid;gap:26px;min-width:0}
+.field{display:grid;gap:10px;min-width:0}
+.field>span{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ink-soft)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:var(--day);border-radius:999px;padding:9px 16px;font-size:15px;font-weight:500;min-height:42px;transition:background .2s,border-color .2s}
+.chip:hover{border-color:#CFC7DC}
+.chip[aria-pressed="true"]{background:var(--night);border-color:var(--night);color:var(--on-night)}
+.chip:disabled{opacity:.4;cursor:not-allowed;text-decoration:line-through}
+.input{border:1px solid var(--line);background:var(--day);border-radius:14px;padding:12px 16px;font:inherit;font-size:16px;min-height:48px;width:100%;color:var(--ink)}
+.input:focus{outline:2px solid var(--moon);border-color:var(--moon)}
+.book-out{background:var(--night);color:var(--on-night);padding:38px;display:flex;flex-direction:column;gap:20px;min-width:0;position:relative}
+.bubble{background:var(--night-2);border:1px solid var(--night-line);border-radius:20px 20px 20px 6px;padding:20px 22px;font-size:17px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere;min-height:120px}
+.to{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--on-night-faint)}
+.to img{width:40px;height:40px;border-radius:50%;object-fit:cover}
+.to b{display:block;color:var(--on-night);font-weight:600;font-size:15px}
+.book-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:auto}
+.small{font-size:14px;color:var(--on-night-faint);margin:0}
+.small a{color:var(--moon)}
+.toast{position:fixed;left:0;right:0;margin-inline:auto;width:max-content;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateY(20px);opacity:0;background:var(--ink);color:#fff;padding:12px 20px;border-radius:22px;font-size:15px;line-height:1.4;z-index:80;transition:opacity .3s,transform .3s;pointer-events:none;max-width:calc(100% - 32px);text-align:center}
+.toast.show{opacity:1;transform:translateY(0)}
+/* Breathing */
+.breath{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;background:linear-gradient(160deg,#211D35,#14121F);color:var(--on-night);border-radius:28px;padding:56px;overflow:hidden}
+.breath h2 em{color:var(--moon)}
+.breath .lead{color:var(--on-night-soft)}
+.breath-stage{position:relative;justify-self:center;width:min(300px,70vw);aspect-ratio:1;display:grid;place-items:center}
+.ring{position:absolute;inset:0;border-radius:50%;border:1px dashed rgba(230,200,138,.35)}
+.orb{width:42%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 38% 35%,var(--moon-hi),var(--moon) 60%,#B8924A);box-shadow:0 0 70px rgba(230,200,138,.45);transform:scale(1);transition:transform 4s cubic-bezier(.45,0,.55,1)}
+.orb.big{transform:scale(2.05)}
+.breath-label{position:absolute;inset:0;display:grid;place-items:center;text-align:center;pointer-events:none;font-family:var(--display);font-size:24px;color:var(--night);mix-blend-mode:normal}
+.breath-label small{display:block;font-family:var(--body);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-top:4px}
+.breath-ctl{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:28px}
+.rounds{font-size:14px;color:var(--on-night-faint);font-variant-numeric:tabular-nums}
+/* Reviews */
+.rating{display:flex;align-items:center;gap:14px;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:14px 20px;text-decoration:none}
+.rating b{font-family:var(--display);font-weight:400;font-size:38px;line-height:1}
+.rating span{font-size:14px;color:var(--ink-soft);line-height:1.4}
+.rating .stars{font-size:18px}
+.reviews{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start}
+.review{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.review .stars{font-size:15px}
+.review blockquote{margin:0;font-family:var(--display);font-size:21px;line-height:1.45}
+.review .more{margin:0;color:var(--ink-soft);font-size:16px}
+.review .more[hidden]{display:none}
+.review .toggle{align-self:flex-start;background:none;border:0;padding:12px 0;min-height:44px;margin-block:-8px;font-size:14px;font-weight:600;color:var(--moon-deep);text-decoration:underline;text-underline-offset:4px}
+.review figcaption{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:14px}
+.review figcaption b{color:var(--ink)}
+/* About */
+.about{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:56px;align-items:center}
+.portrait{position:relative;border-radius:200px 200px 28px 28px;overflow:hidden;aspect-ratio:4/5;max-width:440px;width:100%;background:var(--night)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.portrait figcaption{position:absolute;left:16px;bottom:16px;background:rgba(20,18,31,.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--on-night);border-radius:999px;padding:8px 16px;font-size:14px}
+.about p{color:var(--ink-soft);max-width:34em;margin:0 0 16px}
+.about h2{margin:12px 0 24px}
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
+.pillars div{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px 18px;min-width:0}
+.pillars b{display:block;font-family:var(--display);font-weight:400;font-size:20px}
+.pillars span{font-size:14px;color:var(--ink-soft)}
+/* FAQ */
+.faq{display:grid;gap:12px;max-width:820px}
+.faq details{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:0 24px;transition:background .2s}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding-block:20px;font-weight:600;font-size:17px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--display);font-size:28px;line-height:1;color:var(--moon-deep);transition:transform .3s;flex:none}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0 0 22px;color:var(--ink-soft)}
+/* Visit */
+.visit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:0;background:var(--paper);border:1px solid var(--line);border-radius:28px;overflow:hidden}
+.visit-info{padding:38px;display:flex;flex-direction:column;gap:22px;min-width:0}
+.visit-info dl{margin:0;display:grid;gap:18px}
+.visit-info dt{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--ink-soft)}
+.visit-info dd{margin:4px 0 0;font-size:17px}
+.visit-info dd a{color:var(--moon-deep);font-weight:600}
+.hours{width:100%;border-collapse:collapse;font-size:15px;font-variant-numeric:tabular-nums}
+.hours td{padding:5px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;color:var(--ink-soft)}
+.hours tr.today td{font-weight:600;color:var(--ink)}
+.hours tr.off td:last-child{color:#8A84A0}
+.map{min-height:420px;background:var(--day);position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.85)}
+.map-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;text-decoration:none;padding:24px;background:radial-gradient(circle at 50% 45%,#fff 0,var(--day) 70%);color:var(--ink)}
+.map-fallback[hidden]{display:none}
+.map-fallback svg{width:44px;height:44px;color:var(--moon-deep);margin-bottom:6px}
+.map-fallback b{font-family:var(--display);font-weight:400;font-size:26px}
+.map-fallback span{color:var(--ink-soft)}
+.map-fallback u{margin-top:10px;font-weight:600;color:var(--moon-deep);text-underline-offset:4px}
+.appt{margin:0;padding:12px 16px;border-radius:14px;background:var(--day);border-left:3px solid var(--moon);font-size:15px;color:var(--ink-soft)}
+.appt b{color:var(--ink)}
+.about .appt-quote{font-family:var(--display);font-size:24px;line-height:1.35;color:var(--ink);border-left:3px solid var(--moon);padding-left:18px;margin:24px 0}
+.appt-quote span{display:block;font-family:var(--body);font-size:16px;line-height:1.6;color:var(--ink-soft);margin-top:8px}
+.small a.tel,.visit-info a.tel{color:inherit;font-weight:400;text-decoration:none}
+/* Footer */
+footer{margin-top:110px;background:var(--night);color:var(--on-night)}
+.final{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;align-items:center;padding-block:80px 60px}
+.final h2{font-size:clamp(38px,5.4vw,66px);font-weight:300}
+.final h2 em{color:var(--moon)}
+.final p{color:var(--on-night-soft);margin:16px 0 0;max-width:30em}
+.final .cta{justify-content:flex-end;margin:0}
+.foot{border-top:1px solid var(--night-line);padding-block:24px calc(24px + env(safe-area-inset-bottom,0px));font-size:13px;color:var(--on-night-faint);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.foot a{color:var(--on-night-soft)}
+/* Mobile bar */
+.mbar{display:none}
+.rv{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv:not(.in){transform:translateY(18px)}
+@media (max-width:980px){
+.nav-links{display:none}
+.hero-grid{grid-template-columns:1fr;gap:28px;padding-block:44px 40px}
+.moon-card{order:-1;flex-direction:row;justify-self:start;text-align:left;gap:18px}
+#moonCanvas{width:120px}
+.facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+.sessions,.reviews{grid-template-columns:1fr}
+.book,.visit,.breath,.about,.final{grid-template-columns:1fr}
+.breath{padding:36px 24px;gap:28px}
+.final .cta{justify-content:flex-start}
+.map{min-height:320px}
+section{padding-block:72px 0}
+}
+@media (max-width:560px){
+.nav .btn{display:none}
+.book-form,.book-out,.visit-info{padding:26px 20px}
+.card{padding:24px}
+.pillars{grid-template-columns:1fr}
+.mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;gap:10px;align-items:center;justify-content:space-between;background:rgba(20,18,31,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:var(--on-night);padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));border-top:1px solid var(--night-line)}
+.mbar .status{background:none;border:0;padding:0;font-size:13px;min-width:0}.mbar .status-text{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mbar .btn{min-height:44px;padding:8px 20px;font-size:15px}
+footer{padding-bottom:70px}
+.toast{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+.portrait{max-width:300px;margin-inline:auto!important}
+.about{gap:36px}
+.lang button{min-height:44px}
+.nav .wrap{gap:12px}
+.brand{font-size:18px}
+}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*,*::before,*::after{animation:none!important;transition:none!important}
+.js .rv:not(.in){transform:none}
+}
+</style>
+</head>
+<body>
+<header class="nav">
+<div class="wrap">
+<a class="brand" href="#top" aria-label="Moon Healing, back to top">
+<svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="30" cy="34" r="20" fill="#E6C88A"/><circle cx="40" cy="26" r="18" fill="#14121F"/></svg>
+Moon Healing
+</a>
+<nav class="nav-links" aria-label="Sections">
+<a href="#sessions" data-i18n="nav.sessions">Sessions</a>
+<a href="#book" data-i18n="nav.book">Booking</a>
+<a href="#reviews" data-i18n="nav.reviews">Reviews</a>
+<a href="#about" data-i18n="nav.about">About</a>
+<a href="#visit" data-i18n="nav.visit">Visit</a>
+</nav>
+<div class="lang" role="group" aria-label="Language">
+<button type="button" data-lang="en" aria-pressed="true">EN</button>
+<button type="button" data-lang="vi" aria-pressed="false">VI</button>
+</div>
+<a class="btn btn-moon" href="#book" data-i18n="cta.book">Book a session</a>
+</div>
+</header>
+<main id="top">
+<div class="hero">
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="wrap">
+<div class="hero-grid">
+<div>
+<div class="status" id="status"><span class="dot" aria-hidden="true"></span><span class="status-text">By appointment only · Tue–Fri, 10 AM–12 PM</span></div>
+<h1 data-i18n="hero.h1">Slow down.<br><em>Come back</em> to yourself.</h1>
+<p class="lead" data-i18n="hero.lead">One-to-one reiki, massage and somatic sessions with Moon, in a quiet room in Hải Châu, Đà Nẵng. Afterwards there's time to talk and a cup of tea.</p>
+<div class="cta">
+<a class="btn btn-moon" href="#book" data-i18n="cta.book">Book a session</a>
+<a class="btn btn-line" href="#sessions" data-i18n="cta.prices">See sessions &amp; prices</a>
+</div>
+</div>
+<div class="moon-card">
+<canvas id="moonCanvas" width="680" height="680" role="img" aria-label="Today's moon phase"></canvas>
+<div class="moon-cap"><span data-i18n="moon.cap">Tonight's moon over Đà Nẵng</span><b id="moonName">Waxing gibbous</b><span id="moonMeta"></span></div>
+</div>
+</div>
+<dl class="facts">
+<div><dt data-i18n="facts.hours">By appointment</dt><dd data-i18n="facts.hoursv">Tue–Fri, 10 AM–12 PM</dd></div>
+<div><dt data-i18n="facts.google">On Google</dt><dd><span class="stars" aria-hidden="true">★★★★★</span> 5.0 <span data-i18n="facts.reviews">(3 reviews)</span></dd></div>
+<div><dt data-i18n="facts.lang">Languages</dt><dd>English · Tiếng Việt</dd></div>
+<div><dt data-i18n="facts.pay">Payment</dt><dd data-i18n="facts.payv">Cash or QR code</dd></div>
+</dl>
+</div>
+</div>
+<section id="sessions">
+<div class="wrap">
+<div class="sec-head rv">
+<div>
+<div class="eyebrow" data-i18n="s.eyebrow">Sessions &amp; prices</div>
+<h2 data-i18n="s.h2">Choose what your <em>body</em> needs</h2>
+</div>
+<div class="cur" role="group" aria-label="Show prices in">
+<button type="button" data-cur="VND" aria-pressed="true">VND</button>
+<button type="button" data-cur="EUR" aria-pressed="false">€ EUR</button>
+<button type="button" data-cur="USD" aria-pressed="false">$ USD</button>
+</div>
+</div>
+<div class="sessions">
+<article class="card rv">
+<div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M7 11V6a1.5 1.5 0 0 1 3 0v4"/><path d="M10 10V4.5a1.5 1.5 0 0 1 3 0V10"/><path d="M13 10V5.5a1.5 1.5 0 0 1 3 0V12"/><path d="M16 9.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-1a6 6 0 0 1-5-2.7L3.3 14.6a1.5 1.5 0 0 1 2.4-1.8L7 14.5"/></svg></div>
+<h3 data-i18n="s1.h">Reiki</h3>
+<p data-i18n="s1.p">One hour of gentle, hands-on reiki in a quiet room. You lie back and rest; there's nothing you need to do.</p>
+<ul><li data-i18n="s1.l1">One-to-one, in a quiet room</li><li data-i18n="s1.l2">Time to talk afterwards</li></ul>
+<div class="price"><b class="amt" data-vnd="800000">800k ₫</b><span data-i18n="s1.u">1 hour</span></div>
+<button type="button" class="choose" data-pick="reiki" data-i18n="s.pick">Book this →</button>
+</article>
+<article class="card feature rv">
+<span class="tag" data-i18n="s2.tag">Signature</span>
+<div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 13h16a8 8 0 0 1-16 0Z"/><path d="M9 21h6"/><path d="M8 9c0-1.5 1-2 1-3.5M12 9c0-1.5 1-2 1-3.5M16 9c0-1.5 1-2 1-3.5"/></svg></div>
+<h3 data-i18n="s2.h">Somatic session</h3>
+<p data-i18n="s2.p">Massage with natural essential oils, reiki, singing bowls and other tools, combined into one holistic session.</p>
+<ul><li data-i18n="s2.l1">Massage + reiki + singing bowls</li><li data-i18n="s2.l2">Natural essential oils</li></ul>
+<div class="price"><b class="amt" data-vnd="1200000">1,200k ₫</b><span data-i18n="s2.u">per session</span></div>
+<button type="button" class="choose" data-pick="somatic" data-i18n="s.pick">Book this →</button>
+</article>
+<article class="card rv">
+<div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17M3.5 12h17M6 6l12 12M18 6 6 18"/></svg></div>
+<h3 data-i18n="s3.h">8-session journey</h3>
+<p data-i18n="s3.p">Eight somatic sessions to make care a habit, at a lower rate per visit.</p>
+<span class="save" data-i18n="s3.save">Save 2,400k ₫ (25%) vs. 8 single sessions</span>
+<div class="price"><b class="amt" data-vnd="900000">900k ₫</b><span><span data-i18n="s3.u">per session ·</span> <span class="amt" data-vnd="7200000">7,200k ₫</span> <span data-i18n="s3.t">total</span></span></div>
+<button type="button" class="choose" data-pick="package" data-i18n="s.pick">Book this →</button>
+</article>
+</div>
+<p class="note" id="curNote" data-i18n="s.note">Prices in Vietnamese đồng (k = 1,000 ₫). You pay in VND by cash or QR code.</p>
+</div>
+</section>
+<section id="book">
+<div class="wrap">
+<div class="sec-head rv">
+<div>
+<div class="eyebrow" data-i18n="b.eyebrow">Booking</div>
+<h2 data-i18n="b.h2">Write your message in <em>ten seconds</em></h2>
+<p class="lead" data-i18n="b.lead">Moon works by appointment only. Pick a session and a time, and we'll write the message for you to send her on Instagram. She'll confirm.</p>
+</div>
+</div>
+<div class="book rv">
+<form class="book-form" id="bookForm" novalidate>
+<div class="field">
+<span id="lblSession" data-i18n="b.session">Session</span>
+<div class="chips" role="group" aria-labelledby="lblSession" id="chipsSession">
+<button type="button" class="chip" data-v="reiki" aria-pressed="false" data-i18n="s1.h">Reiki</button>
+<button type="button" class="chip" data-v="somatic" aria-pressed="true" data-i18n="s2.h">Somatic session</button>
+<button type="button" class="chip" data-v="package" aria-pressed="false" data-i18n="s3.h">8-session journey</button>
+</div>
+</div>
+<div class="field">
+<span id="lblDay" data-i18n="b.day">Day</span>
+<div class="chips" role="group" aria-labelledby="lblDay" id="chipsDay"></div>
+</div>
+<div class="field">
+<span id="lblTime" data-i18n="b.time">Time</span>
+<div class="chips" role="group" aria-labelledby="lblTime" id="chipsTime">
+<button type="button" class="chip" data-v="10" aria-pressed="true">10:00 AM</button>
+<button type="button" class="chip" data-v="11" aria-pressed="false">11:00 AM</button>
+</div>
+</div>
+<label class="field" for="name">
+<span data-i18n="b.name">Your name</span>
+<input class="input" id="name" name="name" autocomplete="given-name" placeholder="e.g. Linh">
+</label>
+</form>
+<div class="book-out">
+<div class="to"><img src="/avatar.webp" alt="" width="40" height="40"><div><b>Moon · @moonhealing_reiki_massage</b><span data-i18n="b.to">Your message on Instagram</span></div></div>
+<div class="bubble" id="msg" aria-live="polite"></div>
+<div class="book-actions">
+<a class="btn btn-moon" id="sendBtn" href="https://www.instagram.com/moonhealing_reiki_massage/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg><span data-i18n="b.send">Copy &amp; open Instagram</span></a>
+<a class="btn btn-line tel" href="tel:+84975422987"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-i18n="b.call">Call</span></a>
+</div>
+<p class="small"><span data-i18n="b.phone">Phone</span>: <a class="tel" href="tel:+84975422987">+84 975 422 987</a> · <span data-i18n="b.confirm">Moon confirms every booking by message.</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="breathe">
+<div class="wrap">
+<div class="breath rv">
+<div>
+<div class="eyebrow" style="color:var(--moon)" data-i18n="br.eyebrow">Before you come</div>
+<h2 data-i18n="br.h2">Take one <em>calm</em> minute</h2>
+<p class="lead" data-i18n="br.lead">Box breathing: in for 4, hold for 4, out for 4, hold for 4. Follow the moon. Four rounds take about a minute.</p>
+<div class="breath-ctl">
+<button type="button" class="btn btn-moon" id="breathBtn" data-i18n="br.start">Start</button>
+<span class="rounds" id="rounds" aria-live="polite"></span>
+</div>
+</div>
+<div class="breath-stage" aria-hidden="true">
+<div class="ring"></div>
+<div class="orb" id="orb"></div>
+<div class="breath-label" id="breathLabel"></div>
+</div>
+</div>
+</div>
+</section>
+<section id="reviews">
+<div class="wrap">
+<div class="sec-head rv">
+<div>
+<div class="eyebrow" data-i18n="r.eyebrow">Kind words</div>
+<h2 data-i18n="r.h2">From people who've <em>visited</em></h2>
+</div>
+<a class="rating" href="https://www.google.com/maps/place/?q=place_id:ChIJ52BDoBQZQjERBjZA1b45fmc" target="_blank" rel="noopener">
+<b>5.0</b><span><span class="stars" aria-hidden="true">★★★★★</span><br><span data-i18n="r.google">3 reviews on Google</span></span>
+</a>
+</div>
+<div class="reviews">
+<figure class="review rv">
+<div class="stars" aria-label="5 stars">★★★★★</div>
+<blockquote>“Hằng is one of the best healers I've ever met.”</blockquote>
+<p class="more" hidden>Hằng is one of the best healers I've ever met. I had three Reiki sessions with her, and they really helped me accept myself, release old trauma, and let go of a lot of negativity I had been carrying. At first, I honestly didn't believe Reiki would work, but after the sessions, I felt like a completely different person. Hằng is not only caring and professional during the sessions, but she also takes the time to talk and check in with you afterward. She even offers tea and is always willing to help whenever needed. I highly recommend anyone passing through Da Nang to give it a try.</p>
+<button type="button" class="toggle" aria-expanded="false" data-i18n="r.more">Read full review</button>
+<figcaption><b>Mohamed</b><span data-i18n="r.c1">3 reiki sessions</span></figcaption>
+</figure>
+<figure class="review rv">
+<div class="stars" aria-label="5 stars">★★★★★</div>
+<blockquote>“The place was clean, I felt taken care of and listened to.”</blockquote>
+<p class="more" hidden>This is my second time having reiki massage with Hang. The first time was I was surprised to cry during the session as I had never received reiki massage before. It was a good release and Hang is very skillful at her massage skills. She also used very good and natural essential oils which I love so much. The place was clean, I felt taken care of and listened to. I know this is something I would like to keep doing to take care of myself, highly recommended. Thank you Hang for your care 🩵</p>
+<button type="button" class="toggle" aria-expanded="false" data-i18n="r.more">Read full review</button>
+<figcaption><b>Ly Ly</b><span data-i18n="r.c2">Reiki massage</span></figcaption>
+</figure>
+<figure class="review rv">
+<div class="stars" aria-label="5 stars">★★★★★</div>
+<blockquote>“It's like getting a massage from someone that really cares. It's very special you must recommend.”</blockquote>
+<figcaption><b data-i18n="r.g">Google review</b><span data-i18n="r.c3">Massage</span></figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="about">
+<div class="wrap about">
+<figure class="portrait rv" style="margin:0">
+<img src="/moon.webp" alt="Moon, the healer behind Moon Healing" width="400" height="500" loading="lazy">
+<figcaption>Moon · Hằng</figcaption>
+</figure>
+<div class="rv">
+<div class="eyebrow" data-i18n="a.eyebrow">About</div>
+<h2 data-i18n="a.h2">Hi, I'm <em>Moon</em></h2>
+<p data-i18n="a.p1">Moon Healing is my small practice in Đà Nẵng. I see one person at a time, and I believe everyone is choosing their own path and learning their own lessons. I respect that, and I'm here for anyone who asks for help.</p>
+<p class="appt-quote" data-i18n="a.appt">“I work by appointment only.” <span>That way the room, the oils and my full attention are ready for you when you arrive. Just send me a message before you come.</span></p>
+<p data-i18n="a.p2">Sessions can bring up a lot. Some people cry, some simply feel lighter. Whatever comes up is welcome, and afterwards we sit with a cup of tea and talk it through.</p>
+<div class="pillars">
+<div><b data-i18n="a.k1">One-to-one</b><span data-i18n="a.v1">Only you in the room</span></div>
+<div><b data-i18n="a.k2">Natural oils</b><span data-i18n="a.v2">In every massage</span></div>
+<div><b data-i18n="a.k3">Tea after</b><span data-i18n="a.v3">Time to talk and land</span></div>
+</div>
+</div>
+</div>
+</section>
+<section id="faq">
+<div class="wrap">
+<div class="sec-head rv"><div><div class="eyebrow" data-i18n="f.eyebrow">Questions</div><h2 data-i18n="f.h2">Before your <em>first</em> visit</h2></div></div>
+<div class="faq rv">
+<details><summary data-i18n="f.q1">I've never tried reiki. Is that okay?</summary><p data-i18n="f.a1">Yes. Many people arrive unsure whether it will work for them. You simply lie down and rest; Moon guides you through the session.</p></details>
+<details><summary data-i18n="f.q2">What happens in a somatic session?</summary><p data-i18n="f.a2">It combines massage with natural essential oils, reiki, singing bowls and other tools in one session.</p></details>
+<details><summary data-i18n="f.q3">What if I get emotional?</summary><p data-i18n="f.a3">That's normal and welcome. Some people cry during their first session and describe it as a release. There's always time to talk afterwards.</p></details>
+<details><summary data-i18n="f.q4">How do I book and pay?</summary><p data-i18n="f.a4">Moon works by appointment only, so please don't walk in without booking. Send Moon a message on Instagram (or call) with the day and time you'd like. Sessions run from 10 AM to 12 PM, Tuesday to Friday. You pay in VND, by cash or QR code.</p></details>
+<details><summary data-i18n="f.q5">Is this a medical treatment?</summary><p data-i18n="f.a5">No. Reiki and massage are complementary wellness practices for relaxation and care. They don't replace a doctor, and you should keep any treatment you're following.</p></details>
+</div>
+</div>
+</section>
+<section id="visit">
+<div class="wrap">
+<div class="sec-head rv"><div><div class="eyebrow" data-i18n="v.eyebrow">Visit</div><h2 data-i18n="v.h2">Find the <em>quiet room</em></h2></div></div>
+<div class="visit rv">
+<div class="visit-info">
+<dl>
+<div><dt data-i18n="v.addr">Address</dt><dd>K91, 8 Đ. 3 Tháng 2,<br>Hải Châu, Đà Nẵng 50000, Vietnam</dd></div>
+<div><dt data-i18n="v.contact">Contact</dt><dd><a href="https://www.instagram.com/moonhealing_reiki_massage/" target="_blank" rel="noopener">@moonhealing_reiki_massage</a><br><a class="tel" href="tel:+84975422987">+84 975 422 987</a></dd></div>
+</dl>
+<table class="hours" aria-label="Session hours"><tbody id="hoursBody"></tbody></table>
+<p class="appt" data-i18n="v.appt"><b>By appointment only.</b> Please message Moon before you visit.</p>
+<a class="btn btn-dark" href="https://www.google.com/maps/dir/?api=1&amp;destination=Moon+Healing&amp;destination_place_id=ChIJ52BDoBQZQjERBjZA1b45fmc" target="_blank" rel="noopener" data-i18n="v.dir">Get directions</a>
+</div>
+<div class="map">
+<iframe id="mapFrame" title="Map: Moon Healing, Hải Châu, Đà Nẵng" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-src="https://maps.google.com/maps?q=Moon%20Healing%2C%20K91%2C%208%20%C4%90.%203%20Th%C3%A1ng%202%2C%20H%E1%BA%A3i%20Ch%C3%A2u%2C%20%C4%90%C3%A0%20N%E1%BA%B5ng&amp;ll=16.0852496,108.2190103&amp;z=16&amp;output=embed"></iframe>
+<a class="map-fallback" id="mapFallback" href="https://www.google.com/maps/place/?q=place_id:ChIJ52BDoBQZQjERBjZA1b45fmc" target="_blank" rel="noopener" hidden>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+<b>Moon Healing</b><span>K91, 8 Đ. 3 Tháng 2, Hải Châu</span><u data-i18n="v.open">Open in Google Maps</u>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<div class="final">
+<div>
+<h2 data-i18n="end.h2">Your session is <em>one message</em> away.</h2>
+<p data-i18n="end.p">Message Moon on Instagram in English or Vietnamese. She'll find a time that works for you.</p>
+</div>
+<div class="cta">
+<a class="btn btn-moon" href="#book" data-i18n="cta.book">Book a session</a>
+<a class="btn btn-line" href="https://www.instagram.com/moonhealing_reiki_massage/" target="_blank" rel="noopener">Instagram</a>
+</div>
+</div>
+<div class="foot">
+<span>© <span id="yr">2026</span> Moon Healing · Đà Nẵng</span>
+<span data-i18n="end.note">Reiki and massage are complementary wellness practices, not a substitute for medical care.</span>
+</div>
+</div>
+</footer>
+<div class="mbar"><div class="status" id="status2"><span class="dot" aria-hidden="true"></span><span class="status-text">By appointment only</span></div><a class="btn btn-moon" href="#book" data-i18n="cta.bookShort">Book</a></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(function(){
+document.documentElement.classList.add('js');
+var T={
+en:{
+'nav.sessions':'Sessions','nav.book':'Booking','nav.reviews':'Reviews','nav.about':'About','nav.visit':'Visit',
+'cta.book':'Book a session','cta.bookShort':'Book','cta.prices':'See sessions &amp; prices',
+'hero.h1':'Slow down.<br><em>Come back</em> to yourself.',
+'hero.lead':"One-to-one reiki, massage and somatic sessions with Moon, in a quiet room in Hải Châu, Đà Nẵng. Afterwards there's time to talk and a cup of tea.",
+'moon.cap':"Tonight's moon over Đà Nẵng",
+'facts.hours':'By appointment','facts.hoursv':'Tue–Fri, 10 AM–12 PM','facts.google':'On Google','facts.reviews':'(3 reviews)','facts.lang':'Languages','facts.pay':'Payment','facts.payv':'Cash or QR code',
+'s.eyebrow':'Sessions &amp; prices','s.h2':'Choose what your <em>body</em> needs','s.pick':'Book this →',
+'s1.h':'Reiki','s1.p':"One hour of gentle, hands-on reiki in a quiet room. You lie back and rest; there's nothing you need to do.",'s1.l1':'One-to-one, in a quiet room','s1.l2':'Time to talk afterwards','s1.u':'1 hour',
+'s2.tag':'Signature','s2.h':'Somatic session','s2.p':'Massage with natural essential oils, reiki, singing bowls and other tools, combined into one holistic session.','s2.l1':'Massage + reiki + singing bowls','s2.l2':'Natural essential oils','s2.u':'per session',
+'s3.h':'8-session journey','s3.p':'Eight somatic sessions to make care a habit, at a lower rate per visit.','s3.save':'Save {save} (25%) vs. 8 single sessions','s3.u':'per session ·','s3.t':'total',
+'s.note':'Prices in Vietnamese đồng (k = 1,000 ₫). You pay in VND by cash or QR code.',
+'s.noteFx':'Approximate conversion at 1 € ≈ 30,000 ₫ and 1 $ ≈ 26,500 ₫. You pay in VND by cash or QR code.',
+'b.eyebrow':'Booking','b.h2':'Write your message in <em>ten seconds</em>','b.lead':"Moon works by appointment only. Pick a session and a time, and we'll write the message for you to send her on Instagram. She'll confirm.",
+'b.session':'Session','b.day':'Day','b.time':'Time','b.name':'Your name','b.to':'Your message on Instagram',
+'b.send':'Copy &amp; open Instagram','b.call':'Call','b.phone':'Phone','b.confirm':'Moon confirms every booking by message.',
+'b.today':'Today','b.tomorrow':'Tomorrow',
+'b.msg':"Hi Moon! I'd like to book {session} {day} at {time}.{name} Is that time available? Thank you 🌙",'b.on':'on {d}',
+'b.nameLine':" My name is {name}.",
+'b.s.reiki':'a Reiki session (1 hour)','b.s.somatic':'a somatic session','b.s.package':'the 8-session journey, starting with my first session',
+'b.copied':"Message copied. On Moon's profile, tap Message and paste it.",'b.copyFail':'Copy the message above, then paste it in Instagram.',
+'br.eyebrow':'Before you come','br.h2':'Take one <em>calm</em> minute','br.lead':'Box breathing: in for 4, hold for 4, out for 4, hold for 4. Follow the moon. Four rounds take about a minute.',
+'br.start':'Start','br.stop':'Stop','br.in':'Breathe in','br.hold':'Hold','br.out':'Breathe out','br.round':'Round {n} of 4','br.done':'Done. Notice how you feel.',
+'r.eyebrow':'Kind words','r.h2':"From people who've <em>visited</em>",'r.google':'3 reviews on Google','r.more':'Read full review','r.less':'Show less','r.c1':'3 reiki sessions','r.c2':'Reiki massage','r.c3':'Massage','r.g':'Google review',
+'a.eyebrow':'About','a.h2':"Hi, I'm <em>Moon</em>",
+'a.p1':"Moon Healing is my small practice in Đà Nẵng. I see one person at a time, and I believe everyone is choosing their own path and learning their own lessons. I respect that, and I'm here for anyone who asks for help.",
+'a.p2':'Sessions can bring up a lot. Some people cry, some simply feel lighter. Whatever comes up is welcome, and afterwards we sit with a cup of tea and talk it through.',
+'a.appt':'“I work by appointment only.” <span>That way the room, the oils and my full attention are ready for you when you arrive. Just send me a message before you come.</span>','a.k1':'One-to-one','a.v1':'Only you in the room','a.k2':'Natural oils','a.v2':'In every massage','a.k3':'Tea after','a.v3':'Time to talk and land',
+'f.eyebrow':'Questions','f.h2':'Before your <em>first</em> visit',
+'f.q1':"I've never tried reiki. Is that okay?",'f.a1':'Yes. Many people arrive unsure whether it will work for them. You simply lie down and rest; Moon guides you through the session.',
+'f.q2':'What happens in a somatic session?','f.a2':'It combines massage with natural essential oils, reiki, singing bowls and other tools in one session.',
+'f.q3':'What if I get emotional?','f.a3':"That's normal and welcome. Some people cry during their first session and describe it as a release. There's always time to talk afterwards.",
+'f.q4':'How do I book and pay?','f.a4':"Moon works by appointment only, so please don't walk in without booking. Send Moon a message on Instagram (or call) with the day and time you'd like. Sessions run from 10 AM to 12 PM, Tuesday to Friday. You pay in VND, by cash or QR code.",
+'f.q5':'Is this a medical treatment?','f.a5':"No. Reiki and massage are complementary wellness practices for relaxation and care. They don't replace a doctor, and you should keep any treatment you're following.",
+'v.eyebrow':'Visit','v.h2':'Find the <em>quiet room</em>','v.addr':'Address','v.contact':'Contact','v.dir':'Get directions','v.open':'Open in Google Maps','v.appt':'<b>By appointment only.</b> Please message Moon before you visit.','b.numCopied':'Number copied: +84 975 422 987',
+'end.h2':'Your session is <em>one message</em> away.','end.p':"Message Moon on Instagram in English or Vietnamese. She'll find a time that works for you.",
+'end.note':'Reiki and massage are complementary wellness practices, not a substitute for medical care.',
+'st.long':'By appointment only · Tue–Fri, 10 AM–12 PM','st.short':'By appointment only',
+'days':['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],'dshort':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
+'mon':['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+'phase':['New moon','Waxing crescent','First quarter','Waxing gibbous','Full moon','Waning gibbous','Last quarter','Waning crescent'],
+'closed':'Closed','lit':'{p}% lit','toFull':'full moon in {n} days','fullTonight':'full moon tonight','toFull1':'full moon tomorrow'
+},
+vi:{
+'nav.sessions':'Liệu trình','nav.book':'Đặt lịch','nav.reviews':'Đánh giá','nav.about':'Giới thiệu','nav.visit':'Địa chỉ',
+'cta.book':'Đặt lịch hẹn','cta.bookShort':'Đặt lịch','cta.prices':'Xem liệu trình &amp; bảng giá',
+'hero.h1':'Chậm lại.<br><em>Trở về</em> với chính mình.',
+'hero.lead':'Reiki, massage và liệu trình somatic một kèm một cùng Moon, trong một căn phòng yên tĩnh ở Hải Châu, Đà Nẵng. Sau buổi trị liệu là thời gian trò chuyện bên tách trà.',
+'moon.cap':'Trăng đêm nay trên Đà Nẵng',
+'facts.hours':'Theo lịch hẹn','facts.hoursv':'Thứ 3–Thứ 6, 10:00–12:00','facts.google':'Trên Google','facts.reviews':'(3 đánh giá)','facts.lang':'Ngôn ngữ','facts.pay':'Thanh toán','facts.payv':'Tiền mặt hoặc QR',
+'s.eyebrow':'Liệu trình &amp; bảng giá','s.h2':'Chọn điều <em>cơ thể</em> bạn cần','s.pick':'Đặt liệu trình này →',
+'s1.h':'Reiki','s1.p':'Một giờ reiki nhẹ nhàng trong căn phòng yên tĩnh. Bạn chỉ cần nằm thư giãn, không phải làm gì cả.','s1.l1':'Một kèm một, trong phòng yên tĩnh','s1.l2':'Có thời gian trò chuyện sau buổi','s1.u':'1 giờ',
+'s2.tag':'Đặc trưng','s2.h':'Liệu trình Somatic','s2.p':'Massage với tinh dầu thiên nhiên, reiki, chuông xoay và các công cụ khác, kết hợp trong một buổi trị liệu toàn diện.','s2.l1':'Massage + reiki + chuông xoay','s2.l2':'Tinh dầu thiên nhiên','s2.u':'mỗi buổi',
+'s3.h':'Hành trình 8 buổi','s3.p':'Tám buổi somatic để việc chăm sóc bản thân thành thói quen, với giá tốt hơn mỗi buổi.','s3.save':'Tiết kiệm {save} (25%) so với 8 buổi lẻ','s3.u':'mỗi buổi ·','s3.t':'tổng cộng',
+'s.note':'Giá tính bằng đồng (k = 1.000 ₫). Thanh toán bằng tiền mặt hoặc QR.',
+'s.noteFx':'Quy đổi ước tính: 1 € ≈ 30.000 ₫, 1 $ ≈ 26.500 ₫. Thanh toán bằng VND, tiền mặt hoặc QR.',
+'b.eyebrow':'Đặt lịch','b.h2':'Soạn tin nhắn trong <em>mười giây</em>','b.lead':'Moon chỉ nhận khách theo lịch hẹn. Chọn liệu trình và giờ. Tin nhắn sẽ được soạn sẵn để bạn gửi Moon qua Instagram, và Moon sẽ xác nhận.',
+'b.session':'Liệu trình','b.day':'Ngày','b.time':'Giờ','b.name':'Tên của bạn','b.to':'Tin nhắn của bạn trên Instagram',
+'b.send':'Sao chép &amp; mở Instagram','b.call':'Gọi điện','b.phone':'Điện thoại','b.confirm':'Moon xác nhận mọi lịch hẹn qua tin nhắn.',
+'b.today':'Hôm nay','b.tomorrow':'Ngày mai',
+'b.msg':'Chào Moon! Mình muốn đặt {session} {day} lúc {time}.{name} Giờ này còn trống không ạ? Cảm ơn Moon 🌙','b.on':'vào {d}',
+'b.nameLine':' Mình tên là {name}.',
+'b.s.reiki':'một buổi Reiki (1 giờ)','b.s.somatic':'một buổi Somatic','b.s.package':'buổi đầu tiên của hành trình 8 buổi',
+'b.copied':'Đã sao chép. Trên trang của Moon, bấm Nhắn tin rồi dán vào nhé.','b.copyFail':'Hãy sao chép tin nhắn ở trên rồi dán vào Instagram.',
+'br.eyebrow':'Trước khi đến','br.h2':'Dành một phút <em>bình yên</em>','br.lead':'Thở hộp: hít vào 4 giây, giữ 4 giây, thở ra 4 giây, giữ 4 giây. Hãy theo nhịp mặt trăng. Bốn vòng mất khoảng một phút.',
+'br.start':'Bắt đầu','br.stop':'Dừng','br.in':'Hít vào','br.hold':'Giữ','br.out':'Thở ra','br.round':'Vòng {n}/4','br.done':'Xong rồi. Hãy cảm nhận cơ thể bạn.',
+'r.eyebrow':'Lời cảm nhận','r.h2':'Từ những người <em>đã đến</em>','r.google':'3 đánh giá trên Google','r.more':'Đọc toàn bộ','r.less':'Thu gọn','r.c1':'3 buổi reiki','r.c2':'Reiki massage','r.c3':'Massage','r.g':'Đánh giá Google',
+'a.eyebrow':'Giới thiệu','a.h2':'Chào bạn, mình là <em>Moon</em>',
+'a.p1':'Moon Healing là không gian trị liệu nhỏ của mình ở Đà Nẵng. Mình chỉ đón một người mỗi lần. Mình tin mỗi người đều tự chọn con đường và bài học của riêng mình, mình tôn trọng điều đó, và luôn sẵn lòng với bất kỳ ai cần giúp đỡ.',
+'a.p2':'Mỗi buổi có thể khơi dậy nhiều cảm xúc. Có người khóc, có người chỉ thấy nhẹ nhõm hơn. Mọi cảm xúc đều được chào đón, và sau đó chúng mình cùng ngồi uống trà, trò chuyện.',
+'a.appt':'“Mình chỉ làm việc theo lịch hẹn.” <span>Như vậy căn phòng, tinh dầu và toàn bộ sự chú tâm của mình luôn sẵn sàng khi bạn đến. Bạn chỉ cần nhắn cho mình trước khi đến nhé.</span>','a.k1':'Một kèm một','a.v1':'Chỉ có bạn trong phòng','a.k2':'Tinh dầu thiên nhiên','a.v2':'Trong mọi buổi massage','a.k3':'Trà sau buổi','a.v3':'Thời gian để trò chuyện',
+'f.eyebrow':'Câu hỏi','f.h2':'Trước <em>lần đầu</em> đến',
+'f.q1':'Mình chưa từng thử reiki. Có sao không?','f.a1':'Không sao cả. Nhiều người đến mà chưa chắc reiki có hợp với mình không. Bạn chỉ cần nằm thư giãn; Moon sẽ hướng dẫn bạn trong suốt buổi.',
+'f.q2':'Liệu trình somatic gồm những gì?','f.a2':'Kết hợp massage với tinh dầu thiên nhiên, reiki, chuông xoay và các công cụ khác trong một buổi.',
+'f.q3':'Nếu mình xúc động thì sao?','f.a3':'Điều đó rất bình thường và được chào đón. Có người khóc ngay buổi đầu và cảm thấy được giải tỏa. Sau buổi luôn có thời gian để trò chuyện.',
+'f.q4':'Đặt lịch và thanh toán thế nào?','f.a4':'Moon chỉ nhận khách theo lịch hẹn, vì vậy vui lòng đặt lịch trước khi đến. Nhắn tin cho Moon qua Instagram (hoặc gọi điện) với ngày giờ bạn muốn. Các buổi diễn ra từ 10:00 đến 12:00, thứ Ba đến thứ Sáu. Thanh toán bằng VND, tiền mặt hoặc QR.',
+'f.q5':'Đây có phải là điều trị y tế không?','f.a5':'Không. Reiki và massage là phương pháp chăm sóc sức khỏe bổ trợ để thư giãn. Chúng không thay thế bác sĩ, và bạn nên tiếp tục mọi phác đồ điều trị đang theo.',
+'v.eyebrow':'Địa chỉ','v.h2':'Tìm đến <em>căn phòng yên tĩnh</em>','v.addr':'Địa chỉ','v.contact':'Liên hệ','v.dir':'Chỉ đường','v.open':'Mở trên Google Maps','v.appt':'<b>Chỉ nhận theo lịch hẹn.</b> Vui lòng nhắn Moon trước khi đến.','b.numCopied':'Đã sao chép số: +84 975 422 987',
+'end.h2':'Buổi trị liệu của bạn chỉ cách <em>một tin nhắn</em>.','end.p':'Nhắn Moon qua Instagram bằng tiếng Việt hoặc tiếng Anh. Moon sẽ sắp xếp giờ phù hợp với bạn.',
+'end.note':'Reiki và massage là phương pháp chăm sóc sức khỏe bổ trợ, không thay thế điều trị y tế.',
+'st.long':'Chỉ nhận theo lịch hẹn · Thứ 3–Thứ 6, 10:00–12:00','st.short':'Chỉ nhận theo lịch hẹn',
+'days':['Chủ nhật','Thứ hai','Thứ ba','Thứ tư','Thứ năm','Thứ sáu','Thứ bảy'],'dshort':['CN','T2','T3','T4','T5','T6','T7'],
+'mon':['1','2','3','4','5','6','7','8','9','10','11','12'],
+'phase':['Trăng non','Trăng lưỡi liềm đầu tháng','Trăng thượng huyền','Trăng gần tròn','Trăng tròn','Trăng sau rằm','Trăng hạ huyền','Trăng lưỡi liềm cuối tháng'],
+'closed':'Nghỉ','lit':'{p}% được chiếu sáng','toFull':'còn {n} ngày đến trăng tròn','fullTonight':'đêm nay trăng tròn','toFull1':'ngày mai trăng tròn'
+}
+};
+var lang='en',cur='VND',FX={EUR:30000,USD:26500};
+try{var sl=localStorage.getItem('mh-lang');if(sl==='vi'||sl==='en')lang=sl;else if((navigator.language||'').slice(0,2)==='vi')lang='vi';}catch(e){}
+function t(k){return T[lang][k];}
+function fmt(n){return n.toLocaleString(lang==='vi'?'vi-VN':'en-US');}
+function money(vnd){
+if(cur==='VND') return fmt(vnd/1000)+'k ₫';
+var v=Math.round(vnd/FX[cur]);
+return (cur==='EUR'?'≈ €':'≈ $')+fmt(v);
+}
+/* Da Nang time (UTC+7) */
+function dn(){var d=new Date(Date.now()+7*3600e3);return {y:d.getUTCFullYear(),m:d.getUTCMonth(),d:d.getUTCDate(),w:d.getUTCDay(),h:d.getUTCHours()+d.getUTCMinutes()/60};}
+function applyLang(){
+document.documentElement.lang=lang;
+document.querySelectorAll('[data-i18n]').forEach(function(el){var v=t(el.getAttribute('data-i18n'));if(typeof v==='string')el.innerHTML=v;});
+document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.lang===lang);});
+document.getElementById('name').placeholder=lang==='vi'?'Ví dụ: Linh':'e.g. Linh';
+document.querySelectorAll('.review .toggle').forEach(function(b){b.textContent=t(b.getAttribute('aria-expanded')==='true'?'r.less':'r.more');});
+renderPrices();renderStatus();renderDays();renderHours();renderMoonText();renderMsg();
+if(!running) document.getElementById('breathBtn').textContent=t('br.start'); else document.getElementById('breathBtn').textContent=t('br.stop');
+}
+document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){lang=b.dataset.lang;try{localStorage.setItem('mh-lang',lang);}catch(e){}applyLang();});});
+/* Prices */
+function renderPrices(){
+document.querySelectorAll('.amt').forEach(function(el){el.textContent=money(+el.dataset.vnd);});
+document.querySelector('[data-i18n="s3.save"]').textContent=t('s3.save').replace('{save}',money(2400000).replace('≈ ',''));
+document.getElementById('curNote').innerHTML=t(cur==='VND'?'s.note':'s.noteFx');
+document.querySelectorAll('.cur button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.cur===cur);});
+}
+document.querySelectorAll('.cur button').forEach(function(b){b.addEventListener('click',function(){cur=b.dataset.cur;renderPrices();});});
+/* Open status */
+function renderStatus(){
+['status','status2'].forEach(function(id){document.getElementById(id).querySelector('.status-text').textContent=t(id==='status2'?'st.short':'st.long');});
+}
+/* Hours table */
+function renderHours(){
+var n=dn(),order=[1,2,3,4,5,6,0],h='';
+order.forEach(function(w){var on=OPEN.indexOf(w)>-1,c=[];if(w===n.w)c.push('today');if(!on)c.push('off');h+='<tr'+(c.length?' class="'+c.join(' ')+'"':'')+'><td>'+t('days')[w]+'</td><td>'+(on?(lang==='vi'?'10:00–12:00':'10 AM–12 PM'):t('closed'))+'</td></tr>';});
+document.getElementById('hoursBody').innerHTML=h;
+}
+/* Booking builder */
+var sel={session:'somatic',day:-1,time:10},OPEN=[2,3,4,5],LAST=11;
+function dayInfo(i){var n=dn();var d=new Date(Date.UTC(n.y,n.m,n.d+i));return {w:d.getUTCDay(),d:d.getUTCDate(),m:d.getUTCMonth()};}
+function dayLabel(i,long){
+var x=dayInfo(i);
+if(i===0)return t('b.today');if(i===1)return t('b.tomorrow');
+if(lang==='vi')return (long?t('days')[x.w]:t('dshort')[x.w])+' '+x.d+'/'+(x.m+1);
+return (long?t('days')[x.w]:t('dshort')[x.w])+' '+x.d+' '+t('mon')[x.m];
+}
+function timeLabel(h){return lang==='vi'?h+':00':(h>12?h-12:h)+':00 '+(h<12?'AM':'PM');}
+function renderDays(){
+var n=dn(),c=document.getElementById('chipsDay'),h='',days=[];
+for(var i=0;days.length<6;i++){if(OPEN.indexOf(dayInfo(i).w)<0)continue;if(i===0&&n.h>=LAST)continue;days.push(i);}
+if(days.indexOf(sel.day)<0)sel.day=days[0];
+days.forEach(function(i){h+='<button type="button" class="chip" data-v="'+i+'" aria-pressed="'+(sel.day===i)+'">'+dayLabel(i,false)+'</button>';});
+c.innerHTML=h;
+c.querySelectorAll('.chip').forEach(function(b){b.addEventListener('click',function(){sel.day=+b.dataset.v;renderDays();renderTimes();renderMsg();});});
+renderTimes();
+}
+function renderTimes(){
+var n=dn();
+document.querySelectorAll('#chipsTime .chip').forEach(function(b){
+var h=+b.dataset.v,dis=sel.day===0&&n.h>=h;
+b.disabled=dis;b.textContent=timeLabel(h);
+if(dis&&sel.time===h)sel.time=h===10?11:10;
+});
+document.querySelectorAll('#chipsTime .chip').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.v===sel.time);});
+}
+document.querySelectorAll('#chipsTime .chip').forEach(function(b){b.addEventListener('click',function(){sel.time=+b.dataset.v;renderTimes();renderMsg();});});
+function setSession(v){sel.session=v;document.querySelectorAll('#chipsSession .chip').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.v===v);});renderMsg();}
+document.querySelectorAll('#chipsSession .chip').forEach(function(b){b.addEventListener('click',function(){setSession(b.dataset.v);});});
+document.querySelectorAll('[data-pick]').forEach(function(b){b.addEventListener('click',function(){setSession(b.dataset.pick);document.getElementById('book').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});});
+document.getElementById('name').addEventListener('input',renderMsg);
+function msgText(){
+var nm=document.getElementById('name').value.trim();
+return t('b.msg').replace('{session}',t('b.s.'+sel.session)).replace('{day}',sel.day<2?dayLabel(sel.day,true).toLowerCase():t('b.on').replace('{d}',dayLabel(sel.day,true))).replace('{time}',timeLabel(sel.time)).replace('{name}',nm?t('b.nameLine').replace('{name}',nm):'');
+}
+function renderMsg(){document.getElementById('msg').textContent=msgText();}
+var toastT;
+function toast(s){var el=document.getElementById('toast');el.textContent=s;el.classList.add('show');clearTimeout(toastT);toastT=setTimeout(function(){el.classList.remove('show');},3500);}
+document.getElementById('sendBtn').addEventListener('click',function(){
+/* The link itself opens Instagram in a new tab; here we only copy the message. */
+var txt=msgText();
+copy(txt,function(ok){toast(ok?t('b.copied'):t('b.copyFail'));if(!ok)selectMsg();});
+});
+function copy(txt,cb){
+try{
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(function(){cb(true);},function(){cb(legacyCopy(txt));});return;}
+}catch(e){}
+cb(legacyCopy(txt));
+}
+function legacyCopy(txt){
+try{var ta=document.createElement('textarea');ta.value=txt;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();var ok=document.execCommand('copy');document.body.removeChild(ta);return ok;}catch(e){return false;}
+}
+/* Phone: a phone dials; a computer, or this page shown inside another site's frame, copies the number instead. */
+var FRAMED=(function(){try{return window.self!==window.top;}catch(e){return true;}})();
+var CAN_DIAL=matchMedia('(pointer: coarse)').matches&&!FRAMED;
+document.querySelectorAll('a.tel').forEach(function(a){a.addEventListener('click',function(e){
+if(CAN_DIAL)return;
+e.preventDefault();
+copy('+84 975 422 987',function(ok){toast(ok?t('b.numCopied'):'+84 975 422 987');});
+});});
+/* Map */
+(function(){var f=document.getElementById('mapFrame'),fb=document.getElementById('mapFallback');
+if(FRAMED){f.remove();fb.hidden=false;}else{f.src=f.getAttribute('data-src');}})();
+function selectMsg(){var r=document.createRange();r.selectNodeContents(document.getElementById('msg'));var s=getSelection();s.removeAllRanges();s.addRange(r);}
+/* Reviews expand */
+document.querySelectorAll('.review .toggle').forEach(function(b){b.addEventListener('click',function(){var p=b.parentNode.querySelector('.more');var open=b.getAttribute('aria-expanded')==='true';p.hidden=open;b.setAttribute('aria-expanded',!open);b.textContent=t(open?'r.more':'r.less');});});
+/* Moon phase */
+var SYN=29.530588853,REF=Date.UTC(2000,0,6,18,14);
+function phase(){var a=((Date.now()-REF)/864e5)%SYN;if(a<0)a+=SYN;return a/SYN;}
+function phaseIdx(p){return p<.03||p>.97?0:p<.22?1:p<.28?2:p<.47?3:p<.53?4:p<.72?5:p<.78?6:7;}
+function renderMoonText(){
+var p=phase(),lit=Math.round((1-Math.cos(2*Math.PI*p))/2*100),daysToFull=((.5-p+1)%1)*SYN;
+document.getElementById('moonName').textContent=t('phase')[phaseIdx(p)];
+var f=daysToFull<1||daysToFull>SYN-1?t('fullTonight'):(Math.round(daysToFull)===1?t('toFull1'):t('toFull').replace('{n}',Math.round(daysToFull)));
+document.getElementById('moonMeta').textContent=t('lit').replace('{p}',lit)+' · '+f;
+}
+function drawMoon(){
+var c=document.getElementById('moonCanvas'),x=c.getContext('2d'),W=c.width,cx=W/2,cy=W/2,r=W*.34,p=phase();
+x.clearRect(0,0,W,W);
+var g=x.createRadialGradient(cx,cy,r*.8,cx,cy,r*1.45);g.addColorStop(0,'rgba(230,200,138,.25)');g.addColorStop(1,'rgba(230,200,138,0)');
+x.fillStyle=g;x.beginPath();x.arc(cx,cy,r*1.45,0,Math.PI*2);x.fill();
+x.fillStyle='#262238';x.beginPath();x.arc(cx,cy,r,0,Math.PI*2);x.fill();
+var lg=x.createRadialGradient(cx-r*.3,cy-r*.3,r*.1,cx,cy,r);lg.addColorStop(0,'#FBF1D6');lg.addColorStop(.7,'#E6C88A');lg.addColorStop(1,'#C9A65E');
+var wax=p<.5,k=Math.cos(2*Math.PI*p);
+x.save();x.beginPath();x.arc(cx,cy,r,0,Math.PI*2);x.clip();
+x.fillStyle=lg;x.beginPath();
+if(wax)x.arc(cx,cy,r,-Math.PI/2,Math.PI/2,false);else x.arc(cx,cy,r,Math.PI/2,Math.PI*1.5,false);
+x.closePath();x.fill();
+x.beginPath();x.ellipse(cx,cy,Math.abs(k)*r+.5,r+1,0,0,Math.PI*2);
+x.fillStyle=k>0?'#262238':lg;x.fill();
+/* soft maria */
+x.globalAlpha=.07;x.fillStyle='#5A4A2A';
+[[-.25,-.2,.22],[.18,.05,.16],[-.05,.32,.12],[.3,-.3,.09]].forEach(function(m){x.beginPath();x.arc(cx+m[0]*r,cy+m[1]*r,m[2]*r,0,Math.PI*2);x.fill();});
+x.restore();
+}
+/* Starry sky */
+function sky(){
+var c=document.getElementById('sky'),x=c.getContext('2d'),stars=[],dpr=Math.min(2,window.devicePixelRatio||1),reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function size(){var b=c.getBoundingClientRect();c.width=b.width*dpr;c.height=b.height*dpr;stars=[];var n=Math.round(b.width*b.height/5200);for(var i=0;i<n;i++)stars.push({x:Math.random()*c.width,y:Math.random()*c.height,r:(Math.random()*1.1+.3)*dpr,p:Math.random()*6.28,s:.4+Math.random()*1.2});}
+function frame(ts){
+x.clearRect(0,0,c.width,c.height);
+var gr=x.createRadialGradient(c.width*.8,c.height*.35,0,c.width*.8,c.height*.35,c.width*.6);gr.addColorStop(0,'rgba(94,78,150,.35)');gr.addColorStop(1,'rgba(20,18,31,0)');x.fillStyle=gr;x.fillRect(0,0,c.width,c.height);
+stars.forEach(function(s){var a=reduce?.7:.35+.55*(.5+.5*Math.sin(s.p+ts/1000*s.s));x.globalAlpha=a;x.fillStyle='#F3EEE6';x.beginPath();x.arc(s.x,s.y,s.r,0,6.28);x.fill();});
+x.globalAlpha=1;
+if(!reduce&&vis)requestAnimationFrame(frame);
+}
+var vis=true;
+new IntersectionObserver(function(e){var was=vis;vis=e[0].isIntersecting;if(vis&&!was&&!reduce)requestAnimationFrame(frame);}).observe(c);
+size();requestAnimationFrame(frame);
+var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){size();if(reduce)frame(0);},150);});
+}
+/* Breathing */
+var running=false,timer=null;
+function breath(){
+var btn=document.getElementById('breathBtn'),orb=document.getElementById('orb'),lab=document.getElementById('breathLabel'),rd=document.getElementById('rounds');
+var steps=[['br.in',true],['br.hold',true],['br.out',false],['br.hold',false]];
+function stop(done){running=false;clearTimeout(timer);orb.classList.remove('big');lab.innerHTML='';btn.textContent=t('br.start');rd.textContent=done?t('br.done'):'';}
+btn.addEventListener('click',function(){
+if(running){stop(false);return;}
+running=true;btn.textContent=t('br.stop');var i=0;
+(function tick(){
+if(!running)return;
+if(i>=16){stop(true);return;}
+var s=steps[i%4],sec=4;
+orb.classList.toggle('big',s[1]);
+rd.textContent=t('br.round').replace('{n}',Math.floor(i/4)+1);
+(function count(){if(!running)return;lab.innerHTML=t(s[0])+'<small>'+sec+'</small>';if(--sec>0)timer=setTimeout(count,1000);else timer=setTimeout(function(){i++;tick();},1000);})();
+})();
+});
+}
+/* Reveal */
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});}
+else document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in');});
+document.getElementById('yr').textContent=new Date().getFullYear();
+drawMoon();sky();breath();applyLang();
+})();
+</script>
+</body>
+</html>
